@@ -1,0 +1,66 @@
+body {
+    background-color: #333;
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for navigation menu */
+.nav-menu {
+    background-color: #000;
+    color: white;
+    font-size: 24px;
+    font-weight: 385;
+    height: 100vh; /* Full height of viewport */
+    width: 150px; /*Width*/
+    position: fixed; /* Enforces the menu stay in place */
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+
+/* Styles for navigation menu links */
+.nav-link {
+    color: white;
+    text-decoration: none; /* Removes decorations */
+    position: relative;
+    display: inline-block; /* links block elements to fill the container */
+    margin: 25px 0; /* adding space */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: 2px solid white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.sub-header {
+    font-size: 18px;
+    color: white;
+}
+
+/* Center title and image container in middle */
+.title-home {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Aligns content to center */
+}
+
+/* styels for profile image */
+.profile-img {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}

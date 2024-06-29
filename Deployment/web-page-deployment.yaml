@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-digital-resume-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-digital-resume
+  template:
+    metadata:
+      labels:
+        app: my-digital-resume
+    spec:
+      containers:
+      - name: my-digital-resume
+        image: rsennaco/resume-app:my-digital-resume-v1.0.0
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: docker-reg-cred
